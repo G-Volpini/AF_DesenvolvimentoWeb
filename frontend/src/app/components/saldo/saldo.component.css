@@ -1,0 +1,88 @@
+.saldo-wrapper {
+  background: white;
+  border-radius: .75rem;
+  padding: 1.5rem;
+  box-shadow: 0 .0625rem .1875rem rgba(0, 0, 0, 0.05);
+  border: .0625rem solid var(--gray-200);
+  margin-bottom: 1.5rem;
+}
+
+.saldo-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* Saldo Principal - Destaque */
+.saldo-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--emerald-50) 0%, var(--emerald-100) 100%);
+  border-radius: .625rem;
+  border: .125rem solid var(--emerald-600);
+}
+
+.saldo-main.negative {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-left-color: var(--red-600);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value-main {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--emerald-700);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.saldo-main.negative .value-main {
+  color: var(--red-600);
+}
+
+/* Cards Compactos */
+.saldo-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.saldo-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: .5rem;
+  border: .0625rem solid var(--gray-200);
+}
+
+.mini-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mini-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.saldo-mini.receitas .mini-value {
+  color: var(--emerald-600);
+}
+
+.saldo-mini.despesas .mini-value {
+  color: var(--red-500);
+}

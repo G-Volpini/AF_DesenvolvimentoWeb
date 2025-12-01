@@ -1,0 +1,20 @@
+<div class="saldo-wrapper">
+  <div class="saldo-grid">
+    <div class="saldo-main" [class.negative]="saldo.saldo < 0">
+      <span class="label">Saldo Atual</span>
+      <h2 class="value-main">{{ formatarMoeda(saldo.saldo) }}</h2>
+    </div>
+
+    <div class="saldo-cards">
+      <div class="saldo-mini receitas">
+        <span class="mini-label">Receitas</span>
+        <span class="mini-value">{{ formatarMoeda(saldo.receitas) }}</span>
+      </div>
+
+      <div class="saldo-mini despesas">
+        <span class="mini-label">Despesas</span>
+        <span class="mini-value">{{ formatarMoeda(saldo.despesas) }}</span>
+      </div>
+    </div>
+  </div>
+</div>

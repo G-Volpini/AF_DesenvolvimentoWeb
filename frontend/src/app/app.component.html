@@ -1,0 +1,23 @@
+<app-notificacao></app-notificacao> <!-- Notificações (Fica bonito, se bugar demais, tirar isto e voltar aos Alerts comuns)-->
+
+<div class="app-container">
+  <main class="app-main">
+    <app-saldo></app-saldo>
+
+    <div class="content-grid">
+      <div class="form-section">
+        <app-transacao-form 
+          [transacaoParaEditar]="transacaoSelecionada"
+          (transacaoSalva)="onTransacaoSalva()"
+          (cancelarEdicao)="onCancelarEdicao()">
+        </app-transacao-form>
+      </div>
+
+      <div class="list-section">
+        <app-transacao-list 
+          (editarTransacao)="onEditarTransacao($event)">
+        </app-transacao-list>
+      </div>
+    </div>
+  </main>
+</div>
